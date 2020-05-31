@@ -1,4 +1,3 @@
-alert("hi");
 var Game =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
