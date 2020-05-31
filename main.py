@@ -34,4 +34,45 @@ def combineDirectories(source, destination):
         #os.makedirs(destRoot, exist_ok = True)
         #shutil.copy2(root + f, destRoot)
 
-combineDirectories("asset", "asset_from_urls")
+def updateIndexHTML():
+  import requests
+
+  site = requests.get("http://zombs.io")
+  html = site.content
+
+  lowIndex = 0
+  highIndex = 0
+
+  with open("index.html", "wb") as out:
+    #first replacement
+    highIndex = html.index(b'href="/asset/app.css', lowIndex)
+    highIndex = html.index(b'"', highIndex) + 1
+
+    out.write(html[lowIndex:highIndex])
+    out.write(b"asset/app1ff2.css")
+
+    lowIndex = html.index(b'"', highIndex)
+
+    #second replacement
+    highIndex = html.index(b'<script src="/asset/app.js', lowIndex)
+    highIndex = html.index(b'"', highIndex) + 1
+
+    out.write(html[lowIndex:highIndex])
+    out.write(b"asset/app2d60.js")
+
+    lowIndex = html.index(b'"', highIndex)
+
+    #third replacement (not really replacement, but add)
+    highIndex = html.index(b'Sentry.init({', lowIndex)
+    highIndex = html.index(b"'https://zombs.io'", highIndex) + 1
+    highIndex = html.index(b"'", highIndex) + 1
+
+    out.write(html[lowIndex:highIndex])
+    out.write(b", 'https://zombsclone.netlify.app'")
+
+    lowIndex = highIndex
+
+    #save rest of string
+    out.write(html[lowIndex:])
+
+updateIndexHTML()
