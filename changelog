@@ -1,0 +1,150 @@
+# Changelog
+
+## July 10, 2017 - Minor Update
+
+- Minor client optimization
+- Fixed some internal performance metrics
+
+## July 9, 2017 - Minor Update
+
+- New Spell: HEAL TOWERS SPELL. Use the heal spell located on the left side of your screen to cast an AOE heal on your towers that repair them over time!
+- You can now walk through your own buildings for 15 seconds after respawning
+- Health potions are no longer usable for 3 seconds after being hit by an enemy tower
+- Fixed resources displaying as negative when their values are too high
+- Fixed score integer overflow
+- Reduce bow range and speed
+
+## June 26, 2017 - Minor Update
+
+- Fixed the melee tower graphics.
+- Fixed harvester capacity bar overflowing.
+- Potential fix for network delay issue.
+
+## June 25, 2017 - Minor Update
+
+- New Pet - WOODY THE HARVESTER. Woody will follow you around and harvest resources that you target, levelling up in the process.
+- Optimized rendering of assets for better performance.
+- Optimized rendering of the game UI.
+
+## June 12, 2017 - Minor Update
+
+- New Building - RESOURCE HARVESTERS. You can now place 2 harvesters anywhere on the map that will automatically harvest resources for you. They are fuelled by gold and require manual collection by hitting or clicking the Collect button.
+- Added a fix for mouse buttons being held down blocking input.
+- Added profanity filtering on usernames and party names.
+
+## June 6, 2017 - Minor Update
+
+- Fix display on high DPI devices.
+- Made text rendering sharper in-game.
+- Added shield bar to overall UI.
+
+## June 3, 2017 - Minor Update
+
+- Fixed an issue with building limits not resetting when players leave the party.
+- Fixed an issue where you couldn't re-purchase some items in the Shop when you die.
+- Made resource display more precise.
+
+## June 2, 2017 - Minor Update
+
+- Reworked the user interface to be more minimal and feature-complete.
+- You can now reset the walkthrough by opening the settings menu and scrolling to the bottom.
+
+## June 1, 2017 - Minor Update
+
+- New Tower Unit - SLOW TRAPS. Place these strategically around your base to slow incoming zombies!
+- Quality of Life - when weapon is equipped, you now cannot accidentally select a tower
+
+## May 31, 2017 - Minor Update
+
+- New Tier buildings - Tier 8 (Emerald) buildings are now available to build!
+- Party function - Party leaders now can allow or disallow members from selling party buildings
+- New Zombie tier - orange tiers!
+
+## May 30, 2017 - Minor Update
+
+- NEW TOWER - A new tower arrives! The spiky melee tower packs a punch, but it can only shoot in 1 direction. Press R when placing to determine which direction it will face. Choose it's position wisely, and this tower can do some serious damage to enemy zombies
+- On-Hit Effects - When a zombie is damaged, you will now see an on-hit indicator showing that your towers have hit them!
+- Waves - Boss waves were buffed, normal waves above level 100 were made more difficult, and bosses have started giving much more gold when you kill them
+- Major Update coming soon
+
+## May 28, 2017 - Minor Update
+
+- Minor text fixes: Gold mines are always capped at 8 but multiply gold income by the number of players in a party.
+
+## May 25, 2017 - Minor Update
+
+- Reduced cooldown on potion use.
+
+## May 24, 2017 - Minor Update
+
+- [Feature] Spacebar now activates auto-harvesting.
+- [Pet] Experience progress now displayed below the pet and shows level.
+- [Other] You now keep all your items when you die.
+- [Other] Added a leaderboard to the homepage. Note: Tracking only started today.
+
+- Evolving pet before revive is no longer bugged.
+- You are invulnerable when you respawn for 30 seconds.
+- Fixed tokens not dropping by bosses.
+
+## May 21, 2017 - Minor Update
+
+- Added Kick function to party (only leader can kick).
+- Added more purple zombies.
+- Added a cooldown to using health potions to prevent abuse.
+- Fixed a display bug with the party and shop menus.
+- Server population should update much more frequently.
+
+## May 18, 2017 - Minor Update
+
+- Minor text fixes.
+- Nerfed neutral monsters being too strong.
+- Prevented neutral monsters from attacking towers and destroying bases.
+
+## May 17, 2017 - Major Update
+
+- [PETS] You can now have a pet that fights along with you. Check out the shop for how to obtain the first one. You level your pet via killing zombies and monsters around the map. You can also evolve your pet to make it stronger!
+- [MONSTER CAMPS] There are now monster camps around the map that you can kill for experience for your pet. You can also kill them for fun. They will do more things later!
+- [BOSS WAVES] There are now simple boss waves every 8 waves. These check how defensive your base is, they aren't made to be too hard. Bosses also drop tokens which you use to buy special things coming in the near future.
+- [HATS] Hats!
+
+- A few more new zombies - purple tier!
+- Pet whistle calls your pet to return to you.
+- There are now damage numbers when you or your pet hit enemies.
+- More performance optimization and fixes.
+- When players leave your party, their gold mines will despawn to prevent abuse.
+
+## May 14, 2017 - Minor Update
+
+- [PERFORMANCE] Network and frame rates optimized for lower-end systems.
+- [WEAPONS] Bombs now collide with buildings.
+- [BASE] You can no longer place a gold stash too close to another player's stash.
+- [PLAYER] You are now given 30s of invulnerability when you respawn.
+- [PLAYER] Added F key to use a health potion.
+
+- Zombies no longer pause and move in random directions.
+- Chat messages now show directly above the player and in a chatlog.
+
+## May 12, 2017 - Major Update
+
+- [WEAPONS] Buffed weapons massively against zombies and increased gold cost to balance.
+- [ZOMBIES] Added a new yellow zombie tier and updated assets for all of the zombies. End-game waves will be harder - teamwork is much more important for climbing waves and achieving high scores!
+- [SHOP] Added new Shield item to Shop (press B) that absorbs damage from zombies only.
+- [SHOP] Added new Timeout item that prevents the next wave from attacking for one day-night cycle. Use this to take time to rebuild your base/adjust!
+- [ZOMBIES] Adjusted waves 35-50 (red zombie waves are harder now - be careful).
+- [TOWERS/PVP] Towers now attack you if you attack another player's base!
+- [WEAPONS] Normalized damage across towers, players and zombies to reduce PvP snowballing.
+
+- Added changelog to homepage.
+- Added feedback widget to homepage.
+- Added featured YouTuber functionality - contact us on Discord, Twitter or via the feedback form if you're interested.
+- Added share buttons to invite directly to your party after the game ends.
+
+## May 10, 2017 - Minor Update
+
+- Fixed weapons not being usable after respawning.
+- Fixed some potential server crashes.
+
+## May 9, 2017 - Minor Update
+
+- Temporarily disabled player vs. base damage so players can't grief (working on a better fix for this top enable more fun PvP).
+- Fixed party invite not showing actual name.
