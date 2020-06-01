@@ -50423,13 +50423,13 @@ var Game =
 	        this.connectionOptions = options;
 	        this.connected = false;
 	        this.connecting = true;
-	        if (window.location.protocol === 'https:') {
+
+          var considerSiteProtocol = false ? window.location.protocol === 'https:' : false;
+	        if (considerSiteProtocol) {
 	            this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
-              alert('wss://' + options.hostname + ':' + options.port); //59736, 59747, 59686, 259, 260, 250
 	        }
 	        else {
 	            this.socket = new WebSocket('ws://' + options.hostname + ':' + options.port);
-              alert('ws://' + options.hostname + ':' + options.port); //59736, 59747, 59686, 259, 260, 250
 	        }
 	        this.socket.binaryType = 'arraybuffer';
 	        debug('Connecting socket: ', this.socket);
