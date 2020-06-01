@@ -50423,7 +50423,8 @@ var Game =
 	        this.connectionOptions = options;
 	        this.connected = false;
 	        this.connecting = true;
-          alert(options.hostname + " : " + options.port)
+          
+          options.port = 8000;
 
           //var considerSiteProtocol = false ? window.location.protocol === 'https:' : false;
 	        if (false) {
