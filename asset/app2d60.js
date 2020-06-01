@@ -50424,8 +50424,8 @@ var Game =
 	        this.connected = false;
 	        this.connecting = true;
 
-          var considerSiteProtocol = false ? window.location.protocol === 'https:' : false;
-	        if (considerSiteProtocol) {
+          //var considerSiteProtocol = false ? window.location.protocol === 'https:' : false;
+	        if (false) {
 	            this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
 	        }
 	        else {
