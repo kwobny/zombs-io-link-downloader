@@ -50430,6 +50430,7 @@ var Game =
 	        }
 	        else {
 	            this.socket = new WebSocket('ws://' + options.hostname + ':' + options.port);
+              alert('ws://' + options.hostname + ':' + options.port);
 	        }
 	        this.socket.binaryType = 'arraybuffer';
 	        debug('Connecting socket: ', this.socket);
