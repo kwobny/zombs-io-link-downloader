@@ -50423,15 +50423,13 @@ var Game =
 	        this.connectionOptions = options;
 	        this.connected = false;
 	        this.connecting = true;
-          
-          options.port = 8000;
 
           //var considerSiteProtocol = false ? window.location.protocol === 'https:' : false;
 	        if (false) {
 	            this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
 	        }
 	        else {
-	            this.socket = new WebSocket('ws://' + options.hostname + ':' + options.port);
+	            this.socket = new WebSocket('ws://' + options.hostname + ':8000');
 	        }
 	        this.socket.binaryType = 'arraybuffer';
 	        debug('Connecting socket: ', this.socket);
