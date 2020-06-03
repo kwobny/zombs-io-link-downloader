@@ -1,1 +1,0 @@
-var con = new WebSocket("wss://zombs-middleman-server--yeongjinkwon.repl.co?url="+window.location.href);

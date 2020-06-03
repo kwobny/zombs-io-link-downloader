@@ -7,6 +7,7 @@ const app = express();
 const http = require("http");
 const httpServer = http.createServer(app);
 const url = require("url");
+const fs = require("fs");
 
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
@@ -50,6 +51,16 @@ app.get("/", function(req, res, next) {
 });
 
 app.use(express.static("public"));
+
+app.use("/", function(req, res, next) {
+  /*var path = url.parse(req.url, true).pathname
+  if (fs.existsSync("public"+path)) {
+    console.log(req.url);
+  }*/
+  fs.appendFile("urls.txt", req.url + "\n", function() {});
+
+  next();
+});
 
 /*app.use("/websocket", function (req, res, next) {
   res.locals.path = "whatever url/ip address";
