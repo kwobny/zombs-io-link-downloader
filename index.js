@@ -15,9 +15,22 @@ app.use(express.static("public"));
   
 });*/
 
+app.use("/", function(req, res, next) {
+  console.log("index requested");
+
+  httpProxy.web(req, res, {target:"http://zombs.io"});
+
+  /*res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html");
+  res.end();*/
+});
+
+/*app.use("/asset/app2d60.js", function(req, res, next) {
+  res.write
+});*/
+
 httpServer.on("upgrade", function(req, socket, head) {
   var serverUrl = url.parse(req.url, true).query.url;
-  console.log(serverUrl);
   var options = {
     target: serverUrl
   }

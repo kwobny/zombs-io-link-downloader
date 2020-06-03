@@ -50424,15 +50424,16 @@ var Game =
 	        this.connected = false;
 	        this.connecting = true;
 
-          //var considerSiteProtocol = false ? window.location.protocol === 'https:' : false;
-	        if (false) {
-	            this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
+	        if (window.location.protocol === 'https:') {
+	            //this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
+              var middleUrl = "wss://" + window.location.host + window.location.pathname;
 	        }
 	        else {
 	            //this.socket = new WebSocket('ws://' + options.hostname + ':8000');
-              var serverUrl = 'ws://' + options.hostname + ':8000';
+              var middleUrl = "ws://" + window.location.host + window.location.pathname;
 	        }
-          this.socket = new WebSocket("wss://zombs-middleman-server--yeongjinkwon.repl.co?url=" + serverUrl);
+          var endUrl = 'ws://' + options.hostname + ':' + options.port;
+          this.socket = new WebSocket(middleUrl + "?url=" + endUrl);
 
 	        this.socket.binaryType = 'arraybuffer';
 	        debug('Connecting socket: ', this.socket);

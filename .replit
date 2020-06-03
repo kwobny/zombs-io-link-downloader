@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "python main.py"
+run = "node index.js"
