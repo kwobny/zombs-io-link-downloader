@@ -7,6 +7,7 @@ def getFiles():
       linkList = file.read().splitlines()
 
   for link in linkList:
+    link = "public" + link
     if not os.path.exists(link):
       os.makedirs("/".join(link.split("/")[0:-1]), exist_ok = True)
       r = requests.get("http://zombs.io/" + link)
@@ -75,4 +76,4 @@ def updateIndexHTML():
     #save rest of string
     out.write(html[lowIndex:])
 
-updateIndexHTML()
+getFiles()
