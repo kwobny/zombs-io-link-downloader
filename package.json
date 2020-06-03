@@ -1,0 +1,25 @@
+{
+  "name": "zombs-io-link-downloader-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwobny/zombs-io-link-downloader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwobny/zombs-io-link-downloader/issues"
+  },
+  "homepage": "https://github.com/kwobny/zombs-io-link-downloader#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.1",
+    "node-http-proxy": "^0.2.3"
+  }
+}

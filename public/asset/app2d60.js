@@ -50429,8 +50429,11 @@ var Game =
 	            this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
 	        }
 	        else {
-	            this.socket = new WebSocket('ws://' + options.hostname + ':8000');
+	            //this.socket = new WebSocket('ws://' + options.hostname + ':8000');
+              var serverUrl = 'ws://' + options.hostname + ':8000';
 	        }
+          this.socket = new WebSocket("wss://zombs-middleman-server--yeongjinkwon.repl.co?url=" + serverUrl);
+
 	        this.socket.binaryType = 'arraybuffer';
 	        debug('Connecting socket: ', this.socket);
 	        this.bindEventListeners();

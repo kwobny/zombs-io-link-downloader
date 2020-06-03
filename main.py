@@ -43,7 +43,7 @@ def updateIndexHTML():
   lowIndex = 0
   highIndex = 0
 
-  with open("index.html", "wb") as out:
+  with open("public/index.html", "wb") as out:
     #first replacement
     highIndex = html.index(b'href="/asset/app.css', lowIndex)
     highIndex = html.index(b'"', highIndex) + 1
