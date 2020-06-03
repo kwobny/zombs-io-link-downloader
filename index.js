@@ -8,22 +8,53 @@ const http = require("http");
 const httpServer = http.createServer(app);
 const url = require("url");
 
+app.get("/", function(req, res, next) {
+  http.get("http://zombs.io/", function(resp) {
+    var data = "";
+    resp.on("data", function(chunk) {
+      data += chunk;
+    });
+
+    resp.on("end", function() {
+      res.writeHead(200, {"Content-Type":"text/html"});
+      
+      var lowIndex = 0;
+      var highIndex = 0;
+
+      //first replacement
+      highIndex = data.indexOf('href="/asset/app.css', lowIndex)
+      highIndex = data.indexOf('"', highIndex) + 1
+
+      res.write(data.substring(lowIndex, highIndex))
+      res.write("asset/app1ff2.css")
+
+      lowIndex = data.indexOf('"', highIndex)
+
+      //second replacement
+      highIndex = data.indexOf('<script src="/asset/app.js', lowIndex)
+      highIndex = data.indexOf('"', highIndex) + 1
+
+      res.write(data.substring(lowIndex, highIndex))
+      res.write("asset/app2d60.js")
+
+      lowIndex = data.indexOf('"', highIndex)
+
+      //save rest of string
+      res.write(data.substring(lowIndex))
+
+      res.end();
+    });
+  });
+
+  //httpProxy.web(req, res, {target:"http://zombs.io"});
+});
+
 app.use(express.static("public"));
 
 /*app.use("/websocket", function (req, res, next) {
   res.locals.path = "whatever url/ip address";
   
 });*/
-
-app.use("/", function(req, res, next) {
-  console.log("index requested");
-
-  httpProxy.web(req, res, {target:"http://zombs.io"});
-
-  /*res.statusCode = 200;
-  res.setHeader("Content-Type", "text/html");
-  res.end();*/
-});
 
 /*app.use("/asset/app2d60.js", function(req, res, next) {
   res.write
