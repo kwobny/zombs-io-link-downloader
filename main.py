@@ -1,18 +1,37 @@
 import os
 
 def getFiles():
+  """
+  Gets all the files listed on each new line of urls.txt from the zombs server, and places them in corresponding folder structure.
+  """
+
   import requests
 
   with open("urls.txt", "r") as file:
       linkList = file.read().splitlines()
 
   for link in linkList:
-    link = "public" + link
     if not os.path.exists(link):
       os.makedirs("/".join(link.split("/")[0:-1]), exist_ok = True)
-      r = requests.get("http://zombs.io/" + link)
+      r = requests.get("http://zombs.io/" + link[7:])
       with open(link, "xb") as outputFile:
         outputFile.write(r.content)
+
+def getFiles2():
+  """
+  is getFiles but can replace existing files
+  """
+
+  import requests
+
+  with open("urls.txt", "r") as file:
+      linkList = file.read().splitlines()
+
+  for link in linkList:
+    os.makedirs("/".join(link.split("/")[0:-1]), exist_ok = True)
+    r = requests.get("http://zombs.io/" + link[7:])
+    with open(link, "wb") as outputFile:
+      outputFile.write(r.content)
 
 def combineDirectories(source, destination):
   """
@@ -76,4 +95,12 @@ def updateIndexHTML():
     #save rest of string
     out.write(html[lowIndex:])
 
-getFiles()
+def getCorruptedFiles():
+  with open("urls.txt", "w") as out:
+    for root, dirs, files in os.walk("public/asset"):
+      for f in files:
+        f = root + "/" + f
+        with open(f, "rb") as info:
+          if b"nginx" in info.read():
+            out.write(f + "\n")
+            print(f)
