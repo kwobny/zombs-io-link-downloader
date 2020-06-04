@@ -9,6 +9,8 @@ const httpServer = http.createServer(app);
 const url = require("url");
 const fs = require("fs");
 
+const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
+
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
     var data = "";
@@ -46,7 +48,7 @@ app.get("/", function(req, res, next) {
       highIndex = data.indexOf("'", highIndex) + 1
 
       res.write(data.substring(lowIndex, highIndex))
-      res.write(", 'https://zombs-middleman-server--yeongjinkwon.repl.co'")
+      res.write(", '" + serverDomain + "'")
 
       lowIndex = highIndex;
 
@@ -68,7 +70,7 @@ app.use("/", function(req, res, next) {
   //  console.log(req.url);
   //}
   //fs.appendFile("urls.txt", req.url + "\n", function() {});
-  console.log(req.url);
+  console.log("Unknown resource: " + req.url);
 
   next();
 });
