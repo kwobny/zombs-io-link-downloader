@@ -40,6 +40,16 @@ app.get("/", function(req, res, next) {
 
       lowIndex = data.indexOf('"', highIndex)
 
+      //third replacement (not really replacement, but add)
+      highIndex = data.indexOf('Sentry.init({', lowIndex)
+      highIndex = data.indexOf("'https://zombs.io'", highIndex) + 1
+      highIndex = data.indexOf("'", highIndex) + 1
+
+      res.write(data.substring(lowIndex, highIndex))
+      res.write(", 'https://zombs-middleman-server--yeongjinkwon.repl.co'")
+
+      lowIndex = highIndex;
+
       //save rest of string
       res.write(data.substring(lowIndex))
 
@@ -53,11 +63,12 @@ app.get("/", function(req, res, next) {
 app.use(express.static("public"));
 
 app.use("/", function(req, res, next) {
-  /*var path = url.parse(req.url, true).pathname
-  if (fs.existsSync("public"+path)) {
-    console.log(req.url);
-  }*/
-  fs.appendFile("urls.txt", req.url + "\n", function() {});
+  //var path = url.parse(req.url, true).pathname
+  //if (fs.existsSync("public"+path)) {
+  //  console.log(req.url);
+  //}
+  //fs.appendFile("urls.txt", req.url + "\n", function() {});
+  console.log(req.url);
 
   next();
 });

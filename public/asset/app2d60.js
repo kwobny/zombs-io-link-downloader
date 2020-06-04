@@ -43942,6 +43942,7 @@ var Game =
 	    function PlayerModel() {
 	        var _this = _super.call(this) || this;
 	        _this.base = new SpriteEntity_1.default('/asset/image/entity/player/player-base.svg');
+          //_this.base = new SpriteEntity_1.default('/asset/image/entity/player/player-base.svg2');
 	        _this.healthBar = new HealthBar_1.default();
 	        _this.shieldBar = new ShieldBar_1.default();
 	        _this.nameEntity = new TextEntity_1.default('[Unknown]', 'Hammersmith One', 20);
