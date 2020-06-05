@@ -50427,11 +50427,11 @@ var Game =
 
 	        if (window.location.protocol === 'https:') {
 	            //this.socket = new WebSocket('wss://' + options.hostname + ':' + options.port);
-              var middleUrl = "wss://" + window.location.host + window.location.pathname;
+              var middleUrl = "wss://" + window.location.host + window.location.pathname + "/websocket";
 	        }
 	        else {
 	            //this.socket = new WebSocket('ws://' + options.hostname + ':8000');
-              var middleUrl = "ws://" + window.location.host + window.location.pathname;
+              var middleUrl = "ws://" + window.location.host + window.location.pathname + "/websocket";
 	        }
           var endUrl = 'ws://' + options.hostname + ':' + options.port;
           this.socket = new WebSocket(middleUrl + "?url=" + endUrl);

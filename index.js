@@ -72,6 +72,11 @@ app.get("/", function(req, res, next) {
   //httpProxy.web(req, res, {target:"http://zombs.io"});
 });
 
+app.use("/websocket", function (req, res, next) {
+  res.writeHead(200);
+  res.end();
+});
+
 app.use(express.static("public"));
 
 app.use("/", function(req, res, next) {
@@ -84,11 +89,6 @@ app.use("/", function(req, res, next) {
 
   next();
 });
-
-/*app.use("/websocket", function (req, res, next) {
-  res.locals.path = "whatever url/ip address";
-  
-});*/
 
 /*app.use("/asset/app2d60.js", function(req, res, next) {
   res.write
