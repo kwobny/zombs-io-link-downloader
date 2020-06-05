@@ -73,8 +73,12 @@ app.get("/", function(req, res, next) {
 });
 
 app.use("/websocket", function (req, res, next) {
-  res.writeHead(200);
-  res.end();
+  console.log("web");
+  var serverUrl = url.parse(req.url, true).query.url;
+  var options = {
+    target: serverUrl
+  }
+  httpProxy.web(req, res, options);
 });
 
 app.use(express.static("public"));
@@ -95,6 +99,7 @@ app.use("/", function(req, res, next) {
 });*/
 
 httpServer.on("upgrade", function(req, socket, head) {
+  console.log("ws");
   var serverUrl = url.parse(req.url, true).query.url;
   var options = {
     target: serverUrl
