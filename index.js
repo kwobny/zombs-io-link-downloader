@@ -9,8 +9,8 @@ const httpServer = http.createServer(app);
 const url = require("url");
 const fs = require("fs");
 
-const serverDomain = "https://zombs-middleman-server.herokuapp.com/";
-const listenPort = process.env.PORT || 443;
+const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
+const listenPort = process.env.PORT || 8080;
 
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
