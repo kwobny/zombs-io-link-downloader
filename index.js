@@ -9,7 +9,8 @@ const httpServer = http.createServer(app);
 const url = require("url");
 const fs = require("fs");
 
-const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
+const serverDomain = "https://zombs-middleman-server.herokuapp.com/";
+const listenPort = 443;
 
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
@@ -101,7 +102,7 @@ httpServer.on("upgrade", function(req, socket, head) {
   httpProxy.ws(req, socket, head, options);
 });
 
-httpServer.listen(8080);
+httpServer.listen(listenPort);
 
 /*httpProxy.on("proxyReq", function(proxyReq, req, res, options) {
   if (res.locals.path) {
