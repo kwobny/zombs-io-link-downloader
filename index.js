@@ -72,14 +72,14 @@ app.get("/", function(req, res, next) {
   //httpProxy.web(req, res, {target:"http://zombs.io"});
 });
 
-app.use("/websocket", function (req, res, next) {
+/*app.use("/websocket", function (req, res, next) {
   console.log("web");
   var serverUrl = url.parse(req.url, true).query.url;
   var options = {
     target: serverUrl
   }
   httpProxy.web(req, res, options);
-});
+});*/
 
 app.use(express.static("public"));
 

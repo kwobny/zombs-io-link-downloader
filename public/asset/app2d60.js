@@ -50444,7 +50444,8 @@ var Game =
 	        this.socket.addEventListener('open', this.emitter.emit.bind(this.emitter, 'connected'));
 	        this.socket.addEventListener('message', this.onMessage.bind(this));
 	        this.socket.addEventListener('close', this.emitter.emit.bind(this.emitter, 'close'));
-	        this.socket.addEventListener('error', this.emitter.emit.bind(this.emitter, 'error'));
+	        //this.socket.addEventListener('error', this.emitter.emit.bind(this.emitter, 'error'));
+          this.socket.addEventListener('error', function() {alert("error");});
 	    };
 	    BinNetworkAdapter.prototype.disconnect = function () {
 	        this.socket.close();
