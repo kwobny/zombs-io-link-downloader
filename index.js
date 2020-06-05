@@ -10,7 +10,7 @@ const url = require("url");
 const fs = require("fs");
 
 const serverDomain = "https://zombs-middleman-server.herokuapp.com/";
-const listenPort = 443;
+const listenPort = process.env.PORT || 443;
 
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
