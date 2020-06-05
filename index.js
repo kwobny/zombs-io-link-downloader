@@ -33,6 +33,15 @@ app.get("/", function(req, res, next) {
 
       lowIndex = data.indexOf('"', highIndex)
 
+      //actual second addition (aims to prevent tab freeze)
+      highIndex = data.indexOf("<body>", lowIndex);
+      highIndex = data.indexOf(">", highIndex) + 1;
+
+      res.write(data.substring(lowIndex, highIndex));
+      res.write('<script src="preventFreeze.js"></script>');
+
+      lowIndex = highIndex;
+
       //second replacement
       highIndex = data.indexOf('<script src="/asset/app.js', lowIndex)
       highIndex = data.indexOf('"', highIndex) + 1
