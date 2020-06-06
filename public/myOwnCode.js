@@ -1,3 +1,4 @@
+//prevent freeze
 (function() {
   var title = document.getElementsByTagName("title")[0];
   var oldTitle = title.innerHTML;
@@ -11,3 +12,6 @@
     }, 2000);
   });
 })();
+
+//override WebSocket call
+//WebSocket = require('ws');

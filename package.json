@@ -22,5 +22,8 @@
     "express": "^4.17.1",
     "http-proxy": "^1.18.1",
     "node-http-proxy": "^0.2.3"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.1"
   }
 }

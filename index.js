@@ -5,14 +5,12 @@ const httpProxy = require("http-proxy").createServer({
 const express = require("express");
 const app = express();
 const http = require("http");
-const https = require("https");
 const httpServer = http.createServer(app);
 const url = require("url");
 const fs = require("fs");
 
 const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
 const listenPort = process.env.PORT || 8080;
-const pingerSite = "https://Webserver-Pinger--yeongjinkwon.repl.co";
 
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
@@ -41,7 +39,7 @@ app.get("/", function(req, res, next) {
       highIndex = data.indexOf(">", highIndex) + 1;
 
       res.write(data.substring(lowIndex, highIndex));
-      res.write('<script src="preventFreeze.js"></script>');
+      res.write('<script src="myOwnCode.js"></script>');
 
       lowIndex = highIndex;
 
@@ -76,11 +74,10 @@ app.get("/", function(req, res, next) {
 
 //ping the pinger to keep it awake
 app.get("/ping", function(req, res, next) {
+  console.log("ping");
   res.writeHead(200);
   res.write("successful ping");
   res.end();
-  
-  https.get(pingerSite, function(resp) {});
 });
 
 /*app.use("/websocket", function (req, res, next) {
@@ -110,7 +107,6 @@ app.use("/", function(req, res, next) {
 });*/
 
 httpServer.on("upgrade", function(req, socket, head) {
-  console.log("ws");
   var serverUrl = url.parse(req.url, true).query.url;
   var options = {
     target: serverUrl
@@ -125,3 +121,7 @@ httpServer.listen(listenPort);
     proxyReq.path = res.locals.path;
   }
 });*/
+
+const browserify = require("browserify")();
+browserify.add("public/myOwnCode.js");
+browserify.bundle().pipe(fs.createWriteStream("bundle.js"));
