@@ -146,4 +146,6 @@ Possibilities for why the websocket connection shuts down:
 
 3. Something wrong with client
   a. Test this by trying to make a long term game with the actual zombs io site and the proxy site, and see if the websocket connection ends when using both sites, or just one.
+
+4. Or maybe the websocket connection remains active in actuality, but something goes wrong
 */
