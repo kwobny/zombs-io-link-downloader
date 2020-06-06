@@ -14,4 +14,4 @@
 })();
 
 //override WebSocket call
-//WebSocket = require('ws');
+WebSocket = require('../ws-master');
