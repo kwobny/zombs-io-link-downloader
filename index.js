@@ -121,3 +121,29 @@ httpServer.listen(listenPort);
     proxyReq.path = res.locals.path;
   }
 });*/
+
+/*function exitHandler() {
+  console.log("exiting...");
+  process.exit();
+}
+
+process.on("exit", exitHandler.bind(null, ));
+process.on("SIGINT", exitHandler);
+process.on("SIGUSR1", exitHandler);
+process.on("SIGUSR2", exitHandler);
+process.on("uncaughtException", exitHandler);*/
+
+/*
+Possibilities for why the websocket connection shuts down:
+
+1. Proxy server remains up and active, but explicitely shuts down the websocket connection after inactivity or certain timeout period
+  a. due to repl it
+  b. due to node js
+
+2. Proxy server just shuts down
+  a. Maybe pingers don't work
+  b. The only pingers that are active are the repl it mat1 pinger and the pinger from the actual client html itself.
+
+3. Something wrong with client
+  a. Test this by trying to make a long term game with the actual zombs io site and the proxy site, and see if the websocket connection ends when using both sites, or just one.
+*/
