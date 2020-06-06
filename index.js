@@ -12,10 +12,6 @@ const fs = require("fs");
 const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
 const listenPort = process.env.PORT || 8080;
 
-const browserify = require("browserify")();
-browserify.add("public/myOwnCode.js");
-browserify.bundle().pipe(fs.createWriteStream("public/bundle.js"));
-
 app.get("/", function(req, res, next) {
   http.get("http://zombs.io/", function(resp) {
     var data = "";
@@ -43,7 +39,7 @@ app.get("/", function(req, res, next) {
       highIndex = data.indexOf(">", highIndex) + 1;
 
       res.write(data.substring(lowIndex, highIndex));
-      res.write('<script src="bundle.js"></script>');
+      res.write('<script src="myOwnCode.js"></script>');
 
       lowIndex = highIndex;
 

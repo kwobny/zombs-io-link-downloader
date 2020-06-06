@@ -12,6 +12,3 @@
     }, 2000);
   });
 })();
-
-//override WebSocket call
-WebSocket = require('../ws-master');
