@@ -172,6 +172,7 @@ httpProxy.on("close", function(res, socket, head) {
   var writeString = date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket closed\n"
   writeString += "Seconds since last data sent: ";
   writeString += (date.getTime() - lastMessage)/1000;
+  writeString += "\n";
 
   fs.appendFile("log.txt", writeString, function() {});
 });
