@@ -40,3 +40,42 @@ Seconds since last data sent: 0.079
 6/7/2020, 2:17:18 PM: Socket closed
 Seconds since last data sent: 0.052
 6/7/2020, 2:17:20 PM: Socket open
+
+6/7/2020, 6:08:57 PM: Server started:
+	Time since last index request: NaN seconds
+	Time since last ping: NaN seconds
+6/7/2020, 6:08:57 PM: Socket open
+
+6/7/2020, 6:19:51 PM: Server started:
+	Time since last index request: NaN seconds
+	Time since last ping: NaN seconds
+6/7/2020, 6:19:54 PM: Socket open
+
+6/7/2020, 6:22:57 PM: Server started:
+	Time since last index request: 185.726 seconds
+	Time since last ping: NaN seconds
+6/7/2020, 6:23:00 PM: Socket open
+
+6/7/2020, 6:55:22 PM: Server started:
+	Time since last index request: NaN seconds
+	Time since last ping: NaN seconds
+6/7/2020, 6:55:23 PM: Socket open
+
+6/7/2020, 7:03:23 PM: Server started:
+	Time since last index request: 480.624 seconds
+	Time since last ping: 8366.081 seconds
+6/7/2020, 7:03:24 PM: Socket open
+
+6/7/2020, 7:35:55 PM: Server started:
+	Time since last index request: 10343.223 seconds
+	Time since last ping: 10318.157 seconds
+
+6/7/2020, 7:36:09 PM: Server started:
+	Time since last index request: 10357.028 seconds
+	Time since last ping: 10331.962 seconds
+6/7/2020, 7:36:09 PM: Socket open
+
+6/7/2020, 7:37:03 PM: Server started:
+	Time since last index request: 26.689 seconds
+	Time since last ping: 4.23 seconds
+6/7/2020, 7:37:07 PM: Socket open

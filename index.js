@@ -12,11 +12,14 @@ const fs = require("fs");
 const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
 const listenPort = process.env.PORT || 8080;
 
+var lastGetsUrl = "logs/lastGets.txt"
+var urlsReadAppend = fs.openSync("logs/urls.txt", "a+");
+var mainLogAppend = fs.openSync("logs/mainLog.txt", "a");
+
 app.get("/", function(req, res, next) {
   logToConsole("Index requested");
   var date = new Date();
-  writeLine("logs/lastGets.txt", 4, date.getTime());
-  writeLine("logs/lastGets.txt", 5, date.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+  writeLines(lastGetsUrl, [4, 5], [date.getTime(), date.toLocaleString('en-US', { timeZone: 'America/New_York' })]);
 
   http.get("http://zombs.io/", function(resp) {
     var data = "";
@@ -85,8 +88,7 @@ app.get("/ping", function(req, res, next) {
 
   logToConsole("Ping");
   var date = new Date();
-  writeLine("logs/lastGets.txt", 8, date.getTime());
-  writeLine("logs/lastGets.txt", 9, date.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+  writeLines(lastGetsUrl, [8, 9], [date.getTime(), date.toLocaleString('en-US', { timeZone: 'America/New_York' })]);
 });
 
 /*app.use("/websocket", function (req, res, next) {
@@ -108,10 +110,10 @@ app.use("/", function(req, res, next) {
   //fs.appendFile("urls.txt", req.url + "\n", function() {});
   logToConsole("Unknown resource: " + req.url);
 
-  var data = fs.readFileSync("logs/urls.txt");
+  var data = fs.readFileSync(urlsReadAppend);
 
   if (data.indexOf(req.url) !== -1) {
-    fs.appendFileSync("logs/urls.txt", req.url + "\n");
+    fs.appendFileSync(urlsReadAppend, req.url + "\n");
   }
 
   next();
@@ -187,44 +189,70 @@ function logToConsole(message, dateObj) {
   return output;
 }
 
-function writeLine(fileName, line, data, separator) {
+function writeLines(fileName, lines, data, separator) {
   //line parameter is 0 indexed.
-
-  var fileContent = fs.readFileSync(fileName);
-
-  if (!separator) {
-    separator = "\n"
+  //if a file descriptor is given as fileName, then data needs to be an array with the original text first then the actual data.
+  if (typeof fileName === "number") {
+    return;
   }
 
+  if (typeof data === "string") {
+    data = [data];
+  }
+  if (typeof lines === "number" || typeof lines === "bigint") {
+    lines = [lines];
+  }
+  if (!separator) {
+    separator = "\n";
+  }
+
+  var fileContent = fs.readFileSync(fileName);
   var strArray = fileContent.toString().split(separator);
-  strArray[line] = data;
+
+  for (let i = 0; i < data.length; i++) {
+    strArray[lines[i]] = data[i];
+  }
 
   fs.writeFileSync(fileName, strArray.join(separator));
 }
-function readLine(fileName, line, separator) {
+function readLines(fileName, lines, separator) {
   //line parameter is 0 indexed.
-  var fileContent = fs.readFileSync(fileName);
-
+  if (typeof fileName === "number") {
+    return;
+  }
   if (!separator) {
-    separator = "\n"
+    separator = "\n";
   }
 
+  var fileContent = fs.readFileSync(fileName);
+
   var strArray = fileContent.toString().split(separator);
-  return strArray[line];
+
+  if (typeof lines === "number" || typeof lines === "bigint") {
+    return strArray[lines];
+  }
+  else {
+    let returnArr = [];
+    for (l of lines) {
+      returnArr.push(strArray[l]);
+    }
+    return returnArr;
+  }
 }
 
 //log when server started
 (function() {
   var date = new Date();
+  var currentTime = date.getTime();
+  var linesRead = readLines(lastGetsUrl, [4, 8]);
 
   var logString = "\n" + date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Server started:\n"
   logString += "\tTime since last index request: "
-  var currentTime = date.getTime();
-  logString += (currentTime - readLine("logs/lastGets.txt", 4))/1000 + " seconds\n";
+  logString += (currentTime - linesRead[0])/1000 + " seconds\n";
   logString += "\tTime since last ping: "
-  logString += (currentTime - readLine("logs/lastGets.txt", 8))/1000 + " seconds\n";
+  logString += (currentTime - linesRead[1])/1000 + " seconds\n";
 
-  fs.appendFileSync("logs/mainLog.txt", logString);
+  fs.appendFileSync(mainLogAppend, logString);
 })();
 
 //log when socket connection opens
@@ -233,7 +261,7 @@ var lastMessage = 0.0;
 httpProxy.on("open", function(proxySocket) {
   logToConsole("Socket open");
   var date = new Date();
-  fs.appendFileSync("logs/mainLog.txt", (date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket open\n"));
+  fs.appendFileSync(mainLogAppend, (date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket open\n"));
 
   proxySocket.on("data", function() {
     lastMessage = (new Date()).getTime();
@@ -249,5 +277,5 @@ httpProxy.on("close", function(res, socket, head) {
   writeString += (date.getTime() - lastMessage)/1000;
   writeString += " seconds\n";
 
-  fs.appendFileSync("logs/mainLog.txt", writeString);
+  fs.appendFileSync(mainLogAppend, writeString);
 });
