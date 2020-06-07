@@ -149,3 +149,29 @@ Possibilities for why the websocket connection shuts down:
 
 4. Or maybe the websocket connection remains active in actuality, but something goes wrong
 */
+
+//log when server started
+fs.appendFile("log.txt", "\n" + (new Date()).toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Server started\n", function() {});
+
+//log when socket connection opens
+var lastMessage = 0.0;
+
+httpProxy.on("open", function(proxySocket) {
+  var date = new Date();
+  fs.appendFile("log.txt", (date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket open\n"), function() {});
+
+  proxySocket.on("data", function() {
+    lastMessage = (new Date()).getTime();
+  });
+});
+
+//and closes
+httpProxy.on("close", function(res, socket, head) {
+  console.log("close");
+  var date = new Date();
+  var writeString = date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket closed\n"
+  writeString += "Seconds since last data sent: ";
+  writeString += (date.getTime() - lastMessage)/1000;
+
+  fs.appendFile("log.txt", writeString, function() {});
+});
