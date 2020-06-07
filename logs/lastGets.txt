@@ -1,0 +1,10 @@
+First lines are utc time in milliseconds
+Second lines are normal dates
+
+Last index request:
+1591562612135
+6/7/2020, 4:43:32 PM
+
+Last ping:
+1591562637201
+6/7/2020, 4:43:57 PM

@@ -13,6 +13,11 @@ const serverDomain = "https://zombs-middleman-server--yeongjinkwon.repl.co";
 const listenPort = process.env.PORT || 8080;
 
 app.get("/", function(req, res, next) {
+  logToConsole("Index requested");
+  var date = new Date();
+  writeLine("logs/lastGets.txt", 4, date.getTime());
+  writeLine("logs/lastGets.txt", 5, date.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+
   http.get("http://zombs.io/", function(resp) {
     var data = "";
     resp.on("data", function(chunk) {
@@ -74,10 +79,14 @@ app.get("/", function(req, res, next) {
 
 //ping the pinger to keep it awake
 app.get("/ping", function(req, res, next) {
-  console.log("ping");
   res.writeHead(200);
   res.write("successful ping");
   res.end();
+
+  logToConsole("Ping");
+  var date = new Date();
+  writeLine("logs/lastGets.txt", 8, date.getTime());
+  writeLine("logs/lastGets.txt", 9, date.toLocaleString('en-US', { timeZone: 'America/New_York' }));
 });
 
 /*app.use("/websocket", function (req, res, next) {
@@ -97,7 +106,13 @@ app.use("/", function(req, res, next) {
   //  console.log(req.url);
   //}
   //fs.appendFile("urls.txt", req.url + "\n", function() {});
-  console.log("Unknown resource: " + req.url);
+  logToConsole("Unknown resource: " + req.url);
+
+  var data = fs.readFileSync("logs/urls.txt");
+
+  if (data.indexOf(req.url) !== -1) {
+    fs.appendFileSync("logs/urls.txt", req.url + "\n");
+  }
 
   next();
 });
@@ -150,15 +165,75 @@ Possibilities for why the websocket connection shuts down:
 4. Or maybe the websocket connection remains active in actuality, but something goes wrong
 */
 
+/*
+6 Types of Events:
+1. Index requested
+2. Ping
+3. Unknown resource
+4. Server started
+5. Socket open
+6. Socket close
+*/
+
+function logToConsole(message, dateObj) {
+  if (!dateObj) {
+    dateObj = new Date();
+  }
+
+  var output = dateObj.toLocaleTimeString('en-US', { timeZone: 'America/New_York' }) + ": " + message;
+
+  console.log(output);
+
+  return output;
+}
+
+function writeLine(fileName, line, data, separator) {
+  //line parameter is 0 indexed.
+
+  var fileContent = fs.readFileSync(fileName);
+
+  if (!separator) {
+    separator = "\n"
+  }
+
+  var strArray = fileContent.toString().split(separator);
+  strArray[line] = data;
+
+  fs.writeFileSync(fileName, strArray.join(separator));
+}
+function readLine(fileName, line, separator) {
+  //line parameter is 0 indexed.
+  var fileContent = fs.readFileSync(fileName);
+
+  if (!separator) {
+    separator = "\n"
+  }
+
+  var strArray = fileContent.toString().split(separator);
+  return strArray[line];
+}
+
 //log when server started
-fs.appendFile("log.txt", "\n" + (new Date()).toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Server started\n", function() {});
+(function() {
+  var date = new Date();
+
+  var logString = "\n" + date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Server started:\n"
+  logString += "\tTime since last index request: "
+  var currentTime = date.getTime();
+  logString += (currentTime - readLine("logs/lastGets.txt", 4))/1000 + " seconds\n";
+  logString += "\tTime since last ping: "
+  logString += (currentTime - readLine("logs/lastGets.txt", 8))/1000 + " seconds\n";
+
+  fs.appendFileSync("logs/mainLog.txt", logString);
+})();
 
 //log when socket connection opens
 var lastMessage = 0.0;
 
 httpProxy.on("open", function(proxySocket) {
+  logToConsole("Socket open");
   var date = new Date();
-  fs.appendFile("log.txt", (date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket open\n"), function() {});
+  fs.appendFileSync("logs/mainLog.txt", (date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket open\n"));
 
   proxySocket.on("data", function() {
     lastMessage = (new Date()).getTime();
@@ -167,12 +242,12 @@ httpProxy.on("open", function(proxySocket) {
 
 //and closes
 httpProxy.on("close", function(res, socket, head) {
-  console.log("close");
+  logToConsole("Socket close");
   var date = new Date();
   var writeString = date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Socket closed\n"
-  writeString += "Seconds since last data sent: ";
+  writeString += "\tTime since last data sent: ";
   writeString += (date.getTime() - lastMessage)/1000;
-  writeString += "\n";
+  writeString += " seconds\n";
 
-  fs.appendFile("log.txt", writeString, function() {});
+  fs.appendFileSync("logs/mainLog.txt", writeString);
 });
