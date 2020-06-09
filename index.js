@@ -16,6 +16,9 @@ var lastGetsUrl = "logs/lastGets.txt"
 var urlsReadAppend = fs.openSync("logs/urls.txt", "a+");
 var mainLogAppend = fs.openSync("logs/mainLog.txt", "a");
 
+var serverActiveTestInterval = 5000;
+var lastServerActiveUrl = "logs/lastServerActive.txt";
+
 app.get("/", function(req, res, next) {
   logToConsole("Index requested");
   var date = new Date();
@@ -244,13 +247,26 @@ function readLines(fileName, lines, separator) {
 (function() {
   var date = new Date();
   var currentTime = date.getTime();
-  var linesRead = readLines(lastGetsUrl, [4, 8]);
+  var linesRead = readLines(lastGetsUrl, [4, 5, 8, 9]);
+  var linesRead2 = readLines(lastServerActiveUrl, [0, 1]);
 
   var logString = "\n" + date.toLocaleString('en-US', { timeZone: 'America/New_York' }) + ": Server started:\n"
-  logString += "\tTime since last index request: "
-  logString += (currentTime - linesRead[0])/1000 + " seconds\n";
-  logString += "\tTime since last ping: "
-  logString += (currentTime - linesRead[1])/1000 + " seconds\n";
+
+  logString += "\tLast time server was active on was: ";
+  logString += linesRead2[0];
+  logString += "\n\tWhich was ";
+  logString += (currentTime - linesRead2[1])/1000;
+  logString += " seconds ago\n";
+
+  logString += "\tLast index request was on: ";
+  logString += linesRead[1];
+  logString += "\n\tWhich was ";
+  logString += (currentTime - linesRead[0])/1000 + " seconds ago\n";
+
+  logString += "\tLast ping was on: ";
+  logString += linesRead[3];
+  logString += "\n\tWhich was ";
+  logString += (currentTime - linesRead[2])/1000 + " seconds ago\n";
 
   fs.appendFileSync(mainLogAppend, logString);
 })();
@@ -279,3 +295,12 @@ httpProxy.on("close", function(res, socket, head) {
 
   fs.appendFileSync(mainLogAppend, writeString);
 });
+
+setInterval(function() {
+  var date = new Date();
+  var writeString = date.toLocaleString('en-US', { timeZone: 'America/New_York' });
+  writeString += "\n";
+  writeString += date.getTime();
+
+  fs.writeFileSync(lastServerActiveUrl, writeString);
+}, serverActiveTestInterval);

@@ -41,41 +41,411 @@ Seconds since last data sent: 0.079
 Seconds since last data sent: 0.052
 6/7/2020, 2:17:20 PM: Socket open
 
-6/7/2020, 6:08:57 PM: Server started:
-	Time since last index request: NaN seconds
-	Time since last ping: NaN seconds
-6/7/2020, 6:08:57 PM: Socket open
+6/8/2020, 5:58:52 AM: Server started:
+	Time since last index request: 36709.821 seconds
+	Time since last ping: 36721.759 seconds
+6/8/2020, 5:58:53 AM: Socket open
+6/8/2020, 6:01:53 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:01:54 AM: Socket open
+6/8/2020, 6:04:54 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:04:56 AM: Socket open
+6/8/2020, 6:07:56 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:07:57 AM: Socket open
+6/8/2020, 6:10:57 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/8/2020, 6:10:58 AM: Socket open
+6/8/2020, 6:13:58 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:14:00 AM: Socket open
+6/8/2020, 6:17:00 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 6:17:01 AM: Socket open
+6/8/2020, 6:20:01 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 6:20:02 AM: Socket open
+6/8/2020, 6:23:02 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:23:03 AM: Socket open
+6/8/2020, 6:26:04 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:26:05 AM: Socket open
+6/8/2020, 6:29:05 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 6:29:06 AM: Socket open
+6/8/2020, 6:32:06 AM: Socket closed
+	Time since last data sent: 0.054 seconds
+6/8/2020, 6:32:07 AM: Socket open
+6/8/2020, 6:35:07 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:35:09 AM: Socket open
+6/8/2020, 6:38:09 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 6:38:10 AM: Socket open
+6/8/2020, 6:41:10 AM: Socket closed
+	Time since last data sent: 0.054 seconds
+6/8/2020, 6:41:11 AM: Socket open
+6/8/2020, 6:44:12 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 6:44:13 AM: Socket open
+6/8/2020, 6:47:13 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 6:47:14 AM: Socket open
+6/8/2020, 6:50:14 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 6:50:15 AM: Socket open
+6/8/2020, 6:53:15 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 6:53:17 AM: Socket open
+6/8/2020, 6:56:17 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 6:56:18 AM: Socket open
+6/8/2020, 6:59:18 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 6:59:19 AM: Socket open
+6/8/2020, 7:02:20 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:02:21 AM: Socket open
+6/8/2020, 7:05:21 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 7:05:22 AM: Socket open
+6/8/2020, 7:08:22 AM: Socket closed
+	Time since last data sent: 0.046 seconds
+6/8/2020, 7:08:23 AM: Socket open
+6/8/2020, 7:11:24 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 7:11:25 AM: Socket open
+6/8/2020, 7:14:25 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/8/2020, 7:14:26 AM: Socket open
+6/8/2020, 7:17:26 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 7:17:27 AM: Socket open
+6/8/2020, 7:20:27 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:20:29 AM: Socket open
+6/8/2020, 7:23:29 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 7:23:30 AM: Socket open
+6/8/2020, 7:26:30 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 7:26:31 AM: Socket open
+6/8/2020, 7:29:31 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:29:33 AM: Socket open
+6/8/2020, 7:32:33 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:32:34 AM: Socket open
+6/8/2020, 7:35:34 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:35:35 AM: Socket open
+6/8/2020, 7:38:35 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:38:37 AM: Socket open
+6/8/2020, 7:41:37 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 7:41:38 AM: Socket open
+6/8/2020, 7:44:38 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 7:44:39 AM: Socket open
+6/8/2020, 7:47:39 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:47:41 AM: Socket open
+6/8/2020, 7:50:41 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 7:50:42 AM: Socket open
+6/8/2020, 7:53:42 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:53:43 AM: Socket open
+6/8/2020, 7:56:43 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 7:56:45 AM: Socket open
+6/8/2020, 7:59:45 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 7:59:46 AM: Socket open
+6/8/2020, 8:02:46 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 8:02:47 AM: Socket open
+6/8/2020, 8:05:47 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:05:48 AM: Socket open
+6/8/2020, 8:08:49 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:08:50 AM: Socket open
+6/8/2020, 8:11:50 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:11:51 AM: Socket open
+6/8/2020, 8:14:51 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:14:52 AM: Socket open
+6/8/2020, 8:17:53 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:17:54 AM: Socket open
+6/8/2020, 8:20:54 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 8:20:55 AM: Socket open
+6/8/2020, 8:23:55 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/8/2020, 8:23:56 AM: Socket open
+6/8/2020, 8:26:57 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:26:58 AM: Socket open
+6/8/2020, 8:29:58 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 8:29:59 AM: Socket open
+6/8/2020, 8:32:59 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:33:00 AM: Socket open
+6/8/2020, 8:36:01 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:36:02 AM: Socket open
+6/8/2020, 8:39:02 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 8:39:03 AM: Socket open
+6/8/2020, 8:42:03 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 8:42:04 AM: Socket open
+6/8/2020, 8:45:04 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 8:45:06 AM: Socket open
+6/8/2020, 8:48:06 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/8/2020, 8:48:07 AM: Socket open
+6/8/2020, 8:51:07 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/8/2020, 8:51:08 AM: Socket open
+6/8/2020, 8:54:09 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 8:54:10 AM: Socket open
+6/8/2020, 8:57:10 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 8:57:11 AM: Socket open
+6/8/2020, 9:00:11 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 9:00:12 AM: Socket open
+6/8/2020, 9:03:13 AM: Socket closed
+	Time since last data sent: 0.041 seconds
+6/8/2020, 9:03:14 AM: Socket open
+6/8/2020, 9:06:14 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 9:06:15 AM: Socket open
+6/8/2020, 9:09:15 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 9:09:16 AM: Socket open
+6/8/2020, 9:12:17 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 9:12:18 AM: Socket open
+6/8/2020, 9:15:18 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 9:15:19 AM: Socket open
+6/8/2020, 9:18:19 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 9:18:20 AM: Socket open
+6/8/2020, 9:21:21 AM: Socket closed
+	Time since last data sent: 0.054 seconds
+6/8/2020, 9:21:22 AM: Socket open
+6/8/2020, 9:24:22 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 9:24:23 AM: Socket open
+6/8/2020, 9:27:23 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/8/2020, 9:27:24 AM: Socket open
+6/8/2020, 9:30:25 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 9:30:26 AM: Socket open
+6/8/2020, 9:33:26 AM: Socket closed
+	Time since last data sent: 0.046 seconds
+6/8/2020, 9:33:27 AM: Socket open
+6/8/2020, 9:36:27 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 9:36:28 AM: Socket open
+6/8/2020, 9:39:28 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 9:39:30 AM: Socket open
+6/8/2020, 9:42:30 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 9:42:31 AM: Socket open
+6/8/2020, 9:44:42 AM: Socket closed
+	Time since last data sent: 0.002 seconds
+6/8/2020, 10:31:34 AM: Socket open
+6/8/2020, 10:34:34 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/8/2020, 10:34:35 AM: Socket open
+6/8/2020, 10:37:35 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/8/2020, 10:37:36 AM: Socket open
+6/8/2020, 10:40:37 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 10:40:38 AM: Socket open
+6/8/2020, 10:43:38 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 10:43:39 AM: Socket open
+6/8/2020, 10:46:39 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 10:46:40 AM: Socket open
+6/8/2020, 10:49:41 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 10:49:42 AM: Socket open
+6/8/2020, 10:52:42 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 10:52:43 AM: Socket open
+6/8/2020, 10:55:43 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 10:55:44 AM: Socket open
+6/8/2020, 10:58:45 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 10:58:46 AM: Socket open
+6/8/2020, 11:01:46 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 11:01:47 AM: Socket open
+6/8/2020, 11:04:47 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 11:04:49 AM: Socket open
+6/8/2020, 11:07:49 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 11:07:50 AM: Socket open
+6/8/2020, 11:10:50 AM: Socket closed
+	Time since last data sent: 0.052 seconds
+6/8/2020, 11:10:51 AM: Socket open
+6/8/2020, 11:13:51 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/8/2020, 11:13:53 AM: Socket open
+6/8/2020, 11:16:53 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 11:16:54 AM: Socket open
+6/8/2020, 11:19:54 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/8/2020, 11:19:55 AM: Socket open
+6/8/2020, 11:22:55 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 11:22:57 AM: Socket open
+6/8/2020, 11:25:57 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 11:25:58 AM: Socket open
+6/8/2020, 11:28:58 AM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 11:28:59 AM: Socket open
+6/8/2020, 11:32:00 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 11:32:01 AM: Socket open
+6/8/2020, 11:35:01 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 11:35:02 AM: Socket open
 
-6/7/2020, 6:19:51 PM: Server started:
-	Time since last index request: NaN seconds
-	Time since last ping: NaN seconds
-6/7/2020, 6:19:54 PM: Socket open
+6/8/2020, 11:42:11 AM: Server started:
+	Time since last index request: 395.656 seconds
+	Time since last ping: 387.348 seconds
 
-6/7/2020, 6:22:57 PM: Server started:
-	Time since last index request: 185.726 seconds
-	Time since last ping: NaN seconds
-6/7/2020, 6:23:00 PM: Socket open
+6/8/2020, 11:42:54 AM: Server started:
+	Time since last index request: 42 seconds
+	Time since last ping: 430.142 seconds
+6/8/2020, 11:42:56 AM: Socket open
 
-6/7/2020, 6:55:22 PM: Server started:
-	Time since last index request: NaN seconds
-	Time since last ping: NaN seconds
-6/7/2020, 6:55:23 PM: Socket open
+6/8/2020, 11:46:49 AM: Server started:
+	Last index request was on: 6/8/2020, 11:42:56 AM
+	Which is 232.8 seconds ago
+	Last ping was on: 6/8/2020, 11:42:59 AM
+	Which is 230.209 seconds ago
+6/8/2020, 11:46:50 AM: Socket open
 
-6/7/2020, 7:03:23 PM: Server started:
-	Time since last index request: 480.624 seconds
-	Time since last ping: 8366.081 seconds
-6/7/2020, 7:03:24 PM: Socket open
+6/8/2020, 11:48:34 AM: Server started:
+	Last index request was on: 6/8/2020, 11:46:49 AM
+	Which was 104.982 seconds ago
+	Last ping was on: 6/8/2020, 11:48:29 AM
+	Which was 5.821 seconds ago
+6/8/2020, 11:48:35 AM: Socket open
 
-6/7/2020, 7:35:55 PM: Server started:
-	Time since last index request: 10343.223 seconds
-	Time since last ping: 10318.157 seconds
+6/8/2020, 11:48:52 AM: Server started:
+	Last index request was on: 6/8/2020, 11:48:35 AM
+	Which was 17.809 seconds ago
+	Last ping was on: 6/8/2020, 11:48:44 AM
+	Which was 8.656 seconds ago
+6/8/2020, 11:48:53 AM: Socket open
+6/8/2020, 11:51:53 AM: Socket closed
+	Time since last data sent: 0.033 seconds
+6/8/2020, 11:51:55 AM: Socket open
+6/8/2020, 11:54:55 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/8/2020, 11:54:56 AM: Socket open
+6/8/2020, 11:57:57 AM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 11:57:58 AM: Socket open
+6/8/2020, 12:00:58 PM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 12:01:00 PM: Socket open
+6/8/2020, 12:04:00 PM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 12:04:01 PM: Socket open
+6/8/2020, 12:07:02 PM: Socket closed
+	Time since last data sent: 0.05 seconds
+6/8/2020, 12:07:03 PM: Socket open
+6/8/2020, 12:10:03 PM: Socket closed
+	Time since last data sent: 0.051 seconds
+6/8/2020, 12:10:04 PM: Socket open
 
-6/7/2020, 7:36:09 PM: Server started:
-	Time since last index request: 10357.028 seconds
-	Time since last ping: 10331.962 seconds
-6/7/2020, 7:36:09 PM: Socket open
+6/8/2020, 12:11:12 PM: Server started:
+	Last time server was active on was: 
+	Which was NaN seconds ago
+	Last index request was on: 6/8/2020, 12:06:28 PM
+	Which was 283.586 seconds ago
+	Last ping was on: 6/8/2020, 12:11:04 PM
+	Which was 8.366 seconds ago
+6/8/2020, 12:11:13 PM: Socket open
 
-6/7/2020, 7:37:03 PM: Server started:
-	Time since last index request: 26.689 seconds
-	Time since last ping: 4.23 seconds
-6/7/2020, 7:37:07 PM: Socket open
+6/8/2020, 12:11:56 PM: Server started:
+	Last time server was active on was: 6/8/2020, 12:11:47 PM
+	Which was 8.929 seconds ago
+	Last index request was on: 6/8/2020, 12:11:12 PM
+	Which was 43.62 seconds ago
+	Last ping was on: 6/8/2020, 12:11:49 PM
+	Which was 7.32 seconds ago
+6/8/2020, 12:11:57 PM: Socket open
+
+6/9/2020, 11:06:25 AM: Server started:
+	Last time server was active on was: 6/8/2020, 12:12:36 PM
+	Which was 82429.473 seconds ago
+	Last index request was on: 6/8/2020, 12:11:57 PM
+	Which was 82468.873 seconds ago
+	Last ping was on: 6/8/2020, 12:12:39 PM
+	Which was 82426.487 seconds ago
+6/9/2020, 11:06:26 AM: Socket open
+6/9/2020, 11:09:43 AM: Socket closed
+	Time since last data sent: 0.046 seconds
+6/9/2020, 11:09:44 AM: Socket open
+6/9/2020, 11:13:03 AM: Socket closed
+	Time since last data sent: 0.012 seconds
+6/9/2020, 11:13:05 AM: Socket open
+6/9/2020, 11:16:05 AM: Socket closed
+	Time since last data sent: 0.059 seconds
+6/9/2020, 11:16:06 AM: Socket open
+6/9/2020, 11:19:06 AM: Socket closed
+	Time since last data sent: 0.045 seconds
+6/9/2020, 11:19:08 AM: Socket open
+6/9/2020, 11:22:08 AM: Socket closed
+	Time since last data sent: 0.045 seconds
+6/9/2020, 11:22:09 AM: Socket open
+6/9/2020, 11:25:09 AM: Socket closed
+	Time since last data sent: 0.024 seconds
+6/9/2020, 11:25:10 AM: Socket open
+6/9/2020, 11:28:11 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/9/2020, 11:28:12 AM: Socket open
+6/9/2020, 11:31:12 AM: Socket closed
+	Time since last data sent: 0.046 seconds
+6/9/2020, 11:31:13 AM: Socket open
+6/9/2020, 11:34:14 AM: Socket closed
+	Time since last data sent: 0.044 seconds
+6/9/2020, 11:34:15 AM: Socket open
+6/9/2020, 11:37:15 AM: Socket closed
+	Time since last data sent: 0.049 seconds
+6/9/2020, 11:37:16 AM: Socket open
+6/9/2020, 11:40:16 AM: Socket closed
+	Time since last data sent: 0.044 seconds
+6/9/2020, 11:40:18 AM: Socket open
+6/9/2020, 11:43:18 AM: Socket closed
+	Time since last data sent: 0.048 seconds
+6/9/2020, 11:43:19 AM: Socket open
+6/9/2020, 11:46:46 AM: Socket closed
+	Time since last data sent: 0.008 seconds
