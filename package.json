@@ -21,7 +21,7 @@
   "dependencies": {
     "benchmark": "^2.1.4",
     "bufferutil": "^4.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http-proxy": "^1.18.1",
     "node-http-proxy": "^0.2.3",
     "utf-8-validate": "^5.0.2",
